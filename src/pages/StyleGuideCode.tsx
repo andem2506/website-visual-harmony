@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
@@ -331,7 +332,7 @@ interface ProductCardProps {
 const ProductCard = ({ id, name, imageUrl, category, price }: ProductCardProps) => {
   return (
     <div className="product-card bg-white">
-      <Link to={'/product/${id}'}>
+      <Link to={\`/product/\${id}\`}>
         <img 
           src={imageUrl} 
           alt={name} 
@@ -340,7 +341,7 @@ const ProductCard = ({ id, name, imageUrl, category, price }: ProductCardProps) 
         <div className="p-4">
           {category && <p className="text-sm text-bamboo-text-light">{category}</p>}
           <h3 className="product-title">{name}</h3>
-          {price && <p className="product-price">${price.toFixed(2)}</p>}
+          {price && <p className="product-price">\${price.toFixed(2)}</p>}
           <button className="btn-primary w-full mt-4">Add to Cart</button>
         </div>
       </Link>
@@ -396,7 +397,7 @@ const Button = ({
   
   return (
     <button 
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${disabledClasses}`}
+      className={\`\${baseClasses} \${variantClasses[variant]} \${sizeClasses[size]} \${widthClass} \${disabledClasses}\`}
       onClick={onClick}
       disabled={disabled}
     >
