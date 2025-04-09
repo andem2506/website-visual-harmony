@@ -45,9 +45,17 @@ const StyleGuide = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <h1 className="text-4xl md:text-5xl font-raleway font-semibold">Bamboo Style Guide</h1>
-            <Link to="/design-system">
-              <Button variant="outline">View Design System</Button>
-            </Link>
+            <div className="flex gap-4">
+              <Link to="/design-system">
+                <Button variant="outline">View Design System</Button>
+              </Link>
+              <Link to="/style-guide-code">
+                <Button variant="outline">View React Code</Button>
+              </Link>
+              <Link to="/vanilla-style-guide">
+                <Button variant="primary">Vanilla HTML/CSS</Button>
+              </Link>
+            </div>
           </div>
 
           <p className="text-lg text-bamboo-text-light max-w-3xl mb-8">

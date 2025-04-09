@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import DesignSystem from "./pages/DesignSystem";
 import StyleGuide from "./pages/StyleGuide";
 import StyleGuideCode from "./pages/StyleGuideCode";
+import VanillaStyleGuide from "./pages/VanillaStyleGuide";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/design-system" element={<DesignSystem />} />
           <Route path="/style-guide" element={<StyleGuide />} />
           <Route path="/style-guide-code" element={<StyleGuideCode />} />
+          <Route path="/vanilla-style-guide" element={<VanillaStyleGuide />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
