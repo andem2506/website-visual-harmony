@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Bamboo design system colors
+				bamboo: {
+					DEFAULT: '#9C7B61',
+					light: '#BEA68F',
+					dark: '#7A5E48',
+					beige: '#F5F1EA',
+					teal: '#0A5D6A',
+					charcoal: '#404040',
+					'text-light': '#6B6B6B',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +95,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fadeIn 0.5s ease-out forwards'
+			},
+			fontFamily: {
+				raleway: ['Raleway', 'sans-serif'],
+				opensans: ['Open Sans', 'sans-serif']
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
